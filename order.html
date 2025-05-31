@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    select,
+    input[type="text"] {
+      margin: 5px 0;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <h1>Sewa Konsol PlayStation</h1>
+    <form method="post" action="process.php">
+      <label for="barang">Pilih Barang:</label>
+      <select name="barang" id="barang">
+        <option value="PS3">PS 3</option>
+        <option value="PS4">PS 4</option>
+        <option value="PS5">PS 5</option>
+      </select>
+
+      <label for="lama_peminjaman">Lama Peminjaman (hari):</label>
+      <select name="lama_peminjaman" id="lama_peminjaman">
+        <option value="1">1 hari</option>
+        <option value="2">2 hari</option>
+        <option value="3">3 hari</option>
+      </select>
+
+      <label for="harga_pinjaman">Harga Pinjaman:</label>
+      <input type="text" name="harga_pinjaman" id="harga_pinjaman" readonly />
+
+      <label for="tanggal_kembali">Tanggal Kembali:</label>
+      <input type="text" name="tanggal_kembali" id="tanggal_kembali" readonly />
+
+      <input type="submit" value="Proses Peminjaman" />
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
